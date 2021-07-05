@@ -33,15 +33,16 @@ new Vue(
                 ]
             },
         },
-        method: {
+        methods: {
             pushNewMessage: function() {
-                this.myProfile.posts.push(
+                this.myProfile.posts.unshift(
                     {
                         text: this.newMessage,
                         mediaPath: "https://www.tomshw.it/images/images/2021/02/spider-man-no-way-home-145072.jpg",
                         date: "05-07-2021"
                     },
-                );
+                ),
+                this.newMessage= "";
             }
         },
     }
