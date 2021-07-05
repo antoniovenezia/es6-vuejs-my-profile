@@ -24,7 +24,7 @@
         </div>
 
         <div class="new-post">
-            <textarea v-model="newMessage" placeholder="A cosa stai pensando?"></textarea>
+            <textarea v-model="newMessage" @keyup.enter="pushNewMessage(newMessage)" placeholder="A cosa stai pensando?"></textarea>
             <button @click="pushNewMessage(newMessage)" class="send">CREA</button>
         </div>
 
@@ -54,6 +54,6 @@
         </div>
 
     </div>
-    <script src="./js/script-vue.js"></script>
+    <script src="js/script-vue.js"></script>
 </body>
 </html>
